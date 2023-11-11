@@ -1,9 +1,10 @@
-import { useState } from "react";
 import Table from "./components/Table";
+import "./styles.css"
 
 function App() {
-  const showTableOne = true;
-  const showTableTwo = true;
+  const showTableOne = "true";
+  const showTableTwo = "true";
+  
   return (
     <>
       <Table tableOne={showTableOne}></Table>
