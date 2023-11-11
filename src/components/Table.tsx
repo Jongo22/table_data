@@ -5,7 +5,7 @@ interface Props {
   tableTwo: string;
 }
 
-type DataArray =  Array<{[key: string]: number}>
+type DataArray = Array<{ [key: string]: number }>;
 
 const dataArray = [
   { A1: 41 },
@@ -30,11 +30,11 @@ const dataArray = [
   { A20: 28 },
 ];
 
-const sumOfAlpha = dataArray[4]?.A5 + dataArray[19]?.A20
+const sumOfAlpha = dataArray[4]?.A5 + dataArray[19]?.A20;
 const quotientOfBeta = dataArray[14].A15 / dataArray[6].A7;
 const productOfCharlie = dataArray[12].A13 * dataArray[11].A12;
 
-const Table = ({ tableOne}: Props) => {
+const Table = ({ tableOne }: Props) => {
   if (tableOne) {
     return (
       <div>
@@ -78,22 +78,26 @@ const Table = ({ tableOne}: Props) => {
           {" "}
           Table 2
           <table bgColor="black">
-            <tr bgColor="grey">
-              <th>Category</th>
-              <th>Value</th>
-            </tr>
-            <tr bgColor="lightgrey">
-              <th>Alpha</th>
-              <td>{sumOfAlpha}</td>
-            </tr>
-            <tr bgColor="lightgrey">
-              <th>Beta</th>
-              <td>{quotientOfBeta}</td>
-            </tr>
-            <tr bgColor="lightgrey">
-              <th>Charlie</th>
-              <td>{productOfCharlie}</td>
-            </tr>
+            <thead>
+              <tr bgColor="grey">
+                <th>Category</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr bgColor="lightgrey">
+                <th>Alpha</th>
+                <td>{sumOfAlpha}</td>
+              </tr>
+              <tr bgColor="lightgrey">
+                <th>Beta</th>
+                <td>{quotientOfBeta}</td>
+              </tr>
+              <tr bgColor="lightgrey">
+                <th>Charlie</th>
+                <td>{productOfCharlie}</td>
+              </tr>
+            </tbody>
           </table>
         </h3>
       </div>
