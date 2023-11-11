@@ -7,7 +7,7 @@ interface Props {
 
 type DataArray = Array<{ [key: string]: number }>;
 
-const dataArray = [
+const dataArray: DataArray = [
   { A1: 41 },
   { A2: 18 },
   { A3: 21 },
