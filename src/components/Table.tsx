@@ -70,7 +70,7 @@ const Table = ({ tableOne, tableTwo }: Props) => {
         </h3>
       </div>
     );
-  } else {
+  } else if (tableTwo) {
     return (
       <div>
         <h3>
