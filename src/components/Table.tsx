@@ -1,4 +1,3 @@
-
 interface Props {
   tableOne?: string;
   tableTwo?: string;
@@ -36,65 +35,67 @@ const productOfCharlie = dataArray[12].A13 * dataArray[11].A12;
 const Table = ({ tableOne, tableTwo }: Props) => {
   if (tableOne) {
     return (
-      <div>
-        <h3>
+      <div className="container">
+        <h3 className="table-font">
           {" "}
           Table 1
-          <table className="table-color">
-            <thead>
-              <tr className="table-row-color" >
-                <th className="table-header-color">Index</th>
-                <th>Value</th>
-              </tr>
-            </thead>
-            <tbody>
-              {/* Map over the dataArray to create rows */}
-              {dataArray.map((data, index) => (
-                <tr key={index}>
-                  {/* Map over keys to create cells in the first column */}
-                  <td className="table-data-color">
-                    {Object.keys(data).map((key) => (
-                      <div key={key}>{key}</div>
-                    ))}
-                  </td>
-                  {/* Map over values to create cells in the second column */}
-                  <td className="table-data-color">
-                    {Object.values(data).map((value, idx) => (
-                      <div key={idx}>{value}</div>
-                    ))}
-                  </td>
+          <table className="table">
+            <div className="table-container">
+              <thead>
+                <tr className="table-row">
+                  <th className="table-header">Index</th>
+                  <th className="table-header">Value</th>
                 </tr>
-              ))}
-            </tbody>
+              </thead>
+              <tbody>
+                {/* Map over the dataArray to create rows */}
+                {dataArray.map((data, index) => (
+                  <tr key={index}>
+                    {/* Map over keys to create cells in the first column */}
+                    <td className="table-data">
+                      {Object.keys(data).map((key) => (
+                        <div className="index" key={key}>{key}</div>
+                      ))}
+                    </td>
+                    {/* Map over values to create cells in the second column */}
+                    <td className="table-data">
+                      {Object.values(data).map((value, idx) => (
+                        <div className="value" key={idx}>{value}</div>
+                      ))}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </div>
           </table>
         </h3>
       </div>
     );
   } else if (tableTwo) {
     return (
-      <div>
-        <h3>
+      <div className="container">
+        <h3 className="table-font">
           {" "}
           Table 2
-          <table className="table-color">
+          <table className="table">
             <thead>
-              <tr className="table-row-color">
-                <th>Category</th>
-                <th>Value</th>
+              <tr className="table-row">
+                <th className="table-header">Category</th>
+                <th className="table-header">Value</th>
               </tr>
             </thead>
             <tbody>
-              <tr className="table-data-color">
-                <th>Alpha</th>
+              <tr className="table-data">
+                <th className="index" >Alpha</th>
                 <td>{sumOfAlpha}</td>
               </tr>
-              <tr className="table-data-color">
-                <th>Beta</th>
+              <tr className="table-data">
+                <th className="index">Beta</th>
                 <td>{quotientOfBeta}</td>
               </tr>
-              <tr className="table-data-color">
-                <th>Charlie</th>
-                <td >{productOfCharlie}</td>
+              <tr className="table-data">
+                <th className="index">Charlie</th>
+                <td>{productOfCharlie}</td>
               </tr>
             </tbody>
           </table>

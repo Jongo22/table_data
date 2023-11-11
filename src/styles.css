@@ -1,14 +1,46 @@
-.table-color {
+.container {
+    background-color: cadetblue;
+    display:flex;
+    justify-content: center;
+}
+.table-font {
+font-size: 20px;
+color:black;
+}
+
+.table {
     background-color: black;
-}
-.table-row-color {
-    background-color: grey;
+    padding:2px;
+
 }
 
-.table-header-color {
-    background-color: grey;
+.table-container {
+
 }
 
-.table-data-color {
+.table-row {
+    background-color: grey;
+    padding:2px;
+}
+
+.table-header {
+    background-color: grey;
+    padding:2px;
+}
+
+.table-data {
     background-color: lightgrey;
+    padding:2px;
+
 }
+
+.index {
+    display:flex;
+    justify-content: center;
+}
+
+.value {
+    display:flex;
+    justify-content: center;
+}
+
